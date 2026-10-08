@@ -167,3 +167,7 @@ label {
   width: auto;
   display: block;
 }
+
+.titre-centre{
+  text-align: center;
+}
