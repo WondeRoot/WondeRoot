@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - WondeRoot</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="icon" href="../src/icone.ico">
+</head>
+<body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="btn" href="index.html">Accueil</a>
+        <a class="btn" href="page1.html">Jeu 1</a>
+        <a class="btn" href="page2.html">Jeu 2</a>
+        <a class="btn" href="page3.html">Jeu 3</a>
+
+        <div class="nav-droite">
+          <a class="btn" href="profil.html">Profil</a>
+          <a class="btn" href="index.html">Déconnexion</a>
+        </div>
+      </nav>
+  </header>
+
+  <main class="container">
+    <form method="POST">
+        <h2>Changer mon mot de passe</h2>
+        <label for="ancien-mdp">Ancien mot de passe</label>
+        <input type="password" id="ancien-mdp" class="form-input" name="old_password">
+        <label for="nouveau-mdp">Nouveau mot de passe</label>
+        <input type="password" id="nouveau-mdp" class="form-input" name="new_password">
+        <label for="confirm-mdp">Confirmer le mot de passe</label>
+        <input type="password" id="confirm-mdp" class="form-input" name="confirm_password">
+        <input type="submit" class="btn-submit" value="Modifier le mot de passe">
+    </form>
+
+    <form method="POST">
+        <h2>Désinscription</h2>
+        <p>Votre demande sera envoyée à l'administrateur du site.</p>
+        <input type="submit" class="btn-submit" value="Demander ma Désinscription">
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+      <p class="footer-left">Amira Essaadaoui, Romain Hoogstoel, Marwan Esnoussi & Nicolas Boulard | INF2A SAE | 2026/2027</p>
+      <a class="site-logo" href="index.html">
+        <img src="../images/uvsq-logo.png" alt="Logo UVSQ">
+      </a>
+  </footer>
+    
+</body>
+</html>

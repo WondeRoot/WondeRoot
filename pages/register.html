@@ -1,12 +1,9 @@
-<!-- Page 5 du site correspondant au formulaire
-utile à la connexion pour pouvoir jouer aux jeux
--->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Connexion - WondeRoot</title>
+  <title>Register - WondeRoot</title>
   <link href="../css/style.css" rel="stylesheet">
 </head>
 
@@ -27,13 +24,15 @@ utile à la connexion pour pouvoir jouer aux jeux
 
   <main class="container">
   <form method="POST">
-    <h1>Connexion</h1>
+    <h1>Inscription</h1>
     <label for="iden">Identifiant</label>
     <input type="text" id="iden" class="form-input" name="login">
     <label for="mdp">Mot de passe</label>
     <input type="password" id="mdp" class="form-input" name="password">
+    <label for="confirm-mdp">Confirmer le mot de passe</label>
+    <input type="password" id="confirm-mdp" class="form-input" name="confirm_password">
     <input type="submit" class="btn-submit" value="Valider">
-    <p>Pas encore de compte ? <a href="register.html">S'inscrire</a></p>
+    <p>Vous avez déjà un compte ? <a href="page4.html">Se connecter</a></p>
   </form>
 </main>
 
