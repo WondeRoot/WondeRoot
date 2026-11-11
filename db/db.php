@@ -5,7 +5,7 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 function connect(): mysqli
 {
     $connexion = mysqli_connect("localhost", "root", "rootroot", "wonderroot");
-    /*Changez les paramètres en fonction de la configuration */
+    /*param à changer en fonction de la configuration */
     mysqli_set_charset($connexion, "utf8");
     return $connexion;
 }

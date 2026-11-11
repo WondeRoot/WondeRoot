@@ -2,7 +2,7 @@
 session_start();
 require  __DIR__ . '/../db/db.php';
 
-//Page 5 du site correspondant au formulaire utile à la connexion pour pouvoir jouer aux jeux
+// page 5 du site correspondant au formulaire utile à la connexion pour pouvoir jouer aux jeux
 
 $login = '';
 $message = '';
