@@ -1,10 +1,16 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] != 'adminsys') {
+if (!isset($_SESSION['login'])) {
     header('Location: connexion.php');
     exit;
 }
+
+if ($_SESSION['role'] != 'adminsys'){
+    header('Location: accueil.php');
+    exit;
+}
+?>
 ?>
 
 <!doctype html>
