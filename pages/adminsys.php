@@ -11,7 +11,6 @@ if ($_SESSION['role'] != 'adminsys'){
     exit;
 }
 ?>
-?>
 
 <!doctype html>
 <html lang="fr">
