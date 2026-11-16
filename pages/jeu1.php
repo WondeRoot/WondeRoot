@@ -29,8 +29,28 @@ if (!isset($_SESSION['login'])) {
 
   <section class="game-area" aria-label="Zone interactive du jeu">
     <p>[emplacement du jeu]</p>
+
+    <img src="" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="" alt="BA1 - CARROS" title="BA1 - CARROS" href="jeu1.png" coords="584,63,505,352" shape="rect">
+        <area target="" alt="BA2 - BOUCHER" title="BA2 - BOUCHER" href="jeu1.png" coords="712,582,481,352" shape="rect">
+        <area target="" alt="BA3 - BASTIE" title="BA3 - BASTIE" href="jeu1.png" coords="1366,406,714,64" shape="rect">
+        <area target="" alt="BA4 - ST EXUPERY" title="BA4 - ST EXUPERY" href="jeu1.png" coords="468,728,225,592" shape="rect">
+        <area target="" alt="BA5 - MERMOZ" title="BA5 - MERMOZ" href="jeu1.png" coords="932,499,1265,664" shape="rect">
+        <area target="" alt="BA6 - BLERIOT" title="BA6 - BLERIOT" href="jeu1.png" coords="820,678,104" shape="circle">
+        <area target="" alt="BA7 - ANCINNE LOGE GARDIEN" title="BA7 - ANCINNE LOGE GARDIEN" href="jeu1.png" coords="1067,761,1302,832" shape="rect">
+        <area target="" alt="BA8 - MODULAIRES" title="BA8 - MODULAIRES" href="jeu.png" coords="486,736,671,831" shape="rect">
+    </map>
+
+  <iframe>
+
+  </iframe>
+
   </section>
   </main>
+
+
 
   <footer class="site-footer">
       <p class="footer-left">Amira Essaadaoui, Romain Hoogstoel, Marwan Esnoussi, Nelly Blettery & Nicolas Boulard | INF2A SAE | 2026/2027</p>
