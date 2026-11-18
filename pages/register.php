@@ -12,6 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($login === '' || $password === '' || $confirm === '') {
         $message = 'Veuillez remplir tous les champs';
+    } elseif (strlen($password) < 8) {
+        $message = 'Le mot de passe doit contenir au moins 8 caractères';
+    } elseif (!preg_match("#[0-9]+#", $password)) {
+        $message = 'Le mot de passe doit contenir au moins un chiffre';
+    } elseif (!preg_match("#[A-Z]+#", $password)) {
+        $message = 'Le mot de passe doit contenir au moins une lettre majuscule';
+    } elseif (!preg_match("#[a-z]+#", $password)) {
+        $message = 'Le mot de passe doit contenir au moins une lettre minuscule';
+    } elseif (!preg_match('/[^\p{L}\p{N}\s]/u', $password)) {
+        $message = 'Le mot de passe doit contenir au moins un caractère spécial';
+    } elseif (preg_match('/\s/', $password)) {
+        $message = 'Le mot de passe ne doit pas contenir d\'espaces';
     } elseif ($password !== $confirm) {
         $message = 'Les mots de passe ne correspondent pas';
     } elseif (findUser($login)) {
