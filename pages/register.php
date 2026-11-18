@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = 'Le mot de passe doit contenir au moins une lettre majuscule';
     } elseif (!preg_match("#[a-z]+#", $password)) {
         $message = 'Le mot de passe doit contenir au moins une lettre minuscule';
-    } elseif (!preg_match('/[^\p{L}\p{N}\s]/u', $password)) {
+    } elseif (!preg_match('/[^a-zA-Z0-9]/', $password)) {
         $message = 'Le mot de passe doit contenir au moins un caractère spécial';
     } elseif (preg_match('/\s/', $password)) {
         $message = 'Le mot de passe ne doit pas contenir d\'espaces';
