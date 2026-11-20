@@ -1,5 +1,6 @@
 <?php
 $role = $_SESSION['role'] ?? '';
+$username = $_SESSION['username'] ?? '';
 ?>
 
 <header class="site-header">
@@ -14,12 +15,13 @@ $role = $_SESSION['role'] ?? '';
                 <a class="btn" href="connexion.php">Connexion</a>
                 <a class="btn" href="register.php">Inscription</a>
             <?php else : ?>
-                <?php if ($role == 'adminweb'): ?>
-                    <a class="btn" href="adminweb.php">Adminweb</a>
-                <?php endif; ?>
-                <?php if ($role == 'adminsys'): ?>
-                    <a class="btn" href="adminsys.php">Admin système</a>
-                <?php endif; ?>
+            <?php if ($role == 'adminweb'): ?>
+                <a class="btn" href="adminweb.php">Adminweb</a>
+            <?php elseif ($role == 'adminsys'): ?>
+                <a class="btn" href="adminsys.php">Admin système</a>
+            <?php elseif ($username !== ''): ?>
+                <span class="nav-user"><?= htmlspecialchars($username) ?></span>
+            <?php endif; ?>
                 <a class="btn" href="profil.php">Profil</a>
                 <a class="btn" href="../db/deconnexion.php">Déconnexion</a>
             <?php endif; ?>

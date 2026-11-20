@@ -4,9 +4,14 @@
   padding: 0;
 }
 
+html {
+  overflow-y: scroll; /* permet de ne pas faire de décalage à cause de la scrollbar en fonction du changement de page */
+}
+
 body {
   font-family: system-ui, sans-serif;
-  background: #f0eee9;
+  background: #f4f2ee;
+  color: #241e28;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,83 +24,120 @@ a {
 
 /* header + nav */
 .site-header {
-  background: #382a3f;
-  padding: 0.75rem 1.5rem;
+  background: #28202d;
+  padding: 0.9rem 2.5rem;
   position: sticky; /* permet de laisser la barre de nav statique quand on scroll sur une page */
   top: 0; /* statique EN HAUT de la page */
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-nav {
   display: flex;
-  gap: 0.5rem;
+  gap: 1.5rem;
   align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
   width: 100%;
 }
 
 /* boutons dans la barre de nav */
 .btn {
-  color: #f0fdf4;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  background: #3d3145;
+  color: #f4f2ee;
+  padding: 0.45rem 0.9rem;
+  border-radius: 5px;
+  font-size: 0.92rem;
   font-weight: 500;
-  transition: 0.3s;
+  letter-spacing: 0.2px;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
-.site-nav .nav-droite{
+.site-nav .nav-droite {
   margin-left: auto; /* authentifications à droite */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-user {
+  color: #e9e2f0;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  user-select: none;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: #765892;
+  border-color: #b79fd0;
+  color: #ffffff;
 }
 
 /* conteneur principal + accueil */
 main.container {
-  max-width: 1100px;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
-  padding: 5rem; /* images descendues au milieu de accueil.php */
+  padding: 4.5rem 2rem; /* images descendues au milieu de accueil.php */
 }
 
 #blocaccueil {
   width: 100%;
-  background: #765892;
-  color: #ffffff;
-  padding: 4rem;
+  background: #644a7e;
+  color: #fbfaf8;
+  padding: 5rem 2rem;
   text-align: center;
+  border-bottom: 1px solid #28202d;
 }
 
 /* spécifique au h1 (message de bienvenue) */
 #blocaccueil h1 {
-  font-size: 1.75rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 0.5px;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.4px;
+}
+
+#blocaccueil p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #e9e2f0;
+  font-size: 1.05rem;
+  line-height: 1.65;
 }
 
 #blocimgaccueil {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem; /* espace entre chaque image */
-  margin-bottom: 4rem; /* espace entre les images et le texte */
+  flex-wrap: wrap;
+  gap: 2.5rem; /* espace entre chaque image */
+  margin-bottom: 3.5rem; /* espace entre les images et le texte */
 }
 
 .imgaccueil {
-  width: 25%;
-  max-width: 250px;
+  width: 26%;
+  max-width: 240px;
   height: auto;
+  border-radius: 4px;
+  border: 1px solid rgba(40, 32, 45, 0.22);
 }
 
 #descaccueil {
-  max-width: 800px;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid rgba(40, 32, 45, 0.18);
+  border-bottom: 1px solid rgba(40, 32, 45, 0.18);
   text-align: center;
-  line-height: 1.7;
-  font-size: 1.1rem;
+  line-height: 1.8;
+  font-size: 1.08rem;
+  color: #38303f;
 }
 
 /* formulaire d'authentification */
@@ -160,14 +202,15 @@ label {
 
 /* footer */
 .site-footer {
-  background: #382a3f;
-  color: #d7dee7;
-  padding: 1rem 3rem;
-  font-size: 0.8rem;
+  background: #28202d;
+  color: #c7c0ce;
+  padding: 1.25rem 2.5rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-logo img {

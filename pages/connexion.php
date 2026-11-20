@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($user && $user['password'] === md5($password)) {
             $_SESSION['login'] = $login;
+            $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
             header('Location: ' . getRole($user['role']));
             exit;
@@ -38,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Connexion - WondeRoot</title>
   <link href="../css/style.css" rel="stylesheet">
+  <link rel="icon" href="../src/icone.ico">
 </head>
 
 <body>
@@ -49,10 +51,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="message-erreur"><?= htmlspecialchars($message)?></p>
       <?php endif; ?>
     <h1>Connexion</h1>
-    <label for="iden">Identifiant</label>
-    <input type="text" id="iden" class="form-input" name="login">
+    <label for="iden">Adresse e-mail</label>
+    <input type="text" id="iden" class="form-input" name="login" placeholder="prenom.nom@exemple.fr" required>
     <label for="mdp">Mot de passe</label>
-    <input type="password" id="mdp" class="form-input" name="password">
+    <input type="password" id="mdp" class="form-input" name="password" placeholder="Votre mot de passe">
     <input type="submit" class="btn-submit" value="Valider">
     <p>Pas encore de compte ? <a href="register.php">S'inscrire</a></p>
   </form>

@@ -37,7 +37,7 @@ session_start();
   </main>
 
   <footer class="site-footer">
-      <p class="footer-left">Amira Essaadaoui, Romain Hoogstoel, Marwan Esnoussi & Nicolas Boulard & Nelly Blettery | INF2A SAE | 2026/2027</p>
+      <p class="footer-left">Amira Essaadaoui, Romain Hoogstoel, Marwan Esnoussi, Nelly Blettery & Nicolas Boulard | INF2A SAE | 2026/2027</p>
       <a class="site-logo" href="accueil.php">
         <img src="../images/uvsq-logo.png" alt="Logo UVSQ">
       </a>
